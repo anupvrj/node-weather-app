@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div style="text-align:center">
+            <h2> Weather App Using Node.js</h2>
+            </div>
+<article class="widget">
+   <div class="currentlocation"><h3><strong>Your City: </strong>{{cityname}}</h3></div>
+   <div class="search-container">
+    <form class="form-inline" action="/" method="POST">
+      <input type="text" id="city" placeholder="Enter City" name="city">
+      <button type="submit">Search</button>
+    </form>
+    </div> 
+   <div class="weatherIcon"><i class="wi wi-day-cloudy"></i></div>
+    <div class="weatherInfo">
+        {% set tempx = weatherdata.main.temp | number_format(0, '.')-273 %}
+      <div class="temperature"><span>{{tempx}}&deg;</span></div>
+      
+      <div class="description">    
+        <div class="weatherCondition">{{weatherdata.weather[0].main}}</div>    
+        <div class="place">{{weatherdata.weather[0].description}}</div>
+      </div>
+    </div>
+    <div class="date">{{todaydatex}}</div>
+  </article>
+  <footer>
+      <p>Developed by <a href="https://github.com/anupvrj">Anup Kumar</a></p>
+  </footer>
+  </body>
+  </html>

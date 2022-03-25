@@ -1,0 +1,18 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "This is Live Weather App developed using Node and express",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Anup",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "twig": "^1.15.4"
+  }
+}
